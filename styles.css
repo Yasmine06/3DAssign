@@ -1,0 +1,187 @@
+body{
+    background-image: radial-gradient(circle, #1b262c, #0f4c75, #3282b8, #bbe1fa, #cfcfcf);
+
+}
+.text-3d {
+    text-transform: uppercase;
+    font-size: 5rem;
+    color:#eee;
+    position: absolute;
+    top:15%;
+ left:35vw;
+    transform: translate(-50% ,-50%);
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes fadeIn {
+    0% { transform: rotateY(0);}
+    100%  {transform: rotateY(360deg);}
+ }
+ 
+ @keyframes fadeIn {
+    0% {transform: rotateY(0);}
+    100% {transform: rotateY(360deg);}
+ }
+ 
+ .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+ }
+.text-3d {
+    text-shadow:    /* first set */
+                    0 1px 0 rgb(190,190,190),
+                    0 2px 0 rgb(185,185,185),
+                    0 3px 0 rgb(180,180,180),
+                    0 4px 0 rgb(175,175,175),
+                    0 5px 0 rgb(170,170,170),
+                    0 6px 0 rgb(165,165,165),
+                    0 7px 0 rgb(160,160,160),
+                    /* second set */
+                    0 1px 5px rgba(0,0,0,.05),
+                    0 3px 5px rgba(0,0,0,.10),
+                    0 5px 10px rgba(0,0,0,.15),
+                    0 7px 10px rgba(0,0,0,.20),
+                    0 10px 15px rgba(0,0,0,.25);
+}
+.text-3d:hover {
+    text-shadow:
+                    0 1px 0 rgb(190,190,190),
+                    0 2px 0 rgb(185,185,185),
+                    0 3px 0 rgb(180,180,180),
+                    0 4px 0 rgb(175,175,175),
+                    0 5px 0 rgb(170,170,170),
+                    0 6px 0 rgb(165,165,165),
+                    0 7px 0 rgb(160,160,160),
+                    0 8px 0 rgb(155,155,155),
+                    0 9px 0 rgb(150,150,150),
+                    0 1px 5px rgba(0,0,0,.05),
+                    0 5px 5px rgba(0,0,0,.10),
+                    0 10px 10px rgba(0,0,0,.15),
+                    0 15px 10px rgba(0,0,0,.20),
+                    0 20px 15px rgba(0,0,0,.25);
+    transform: translate(-51%,-51%);
+    transition: all 0.3s ease-in-out;
+}
+.pointer
+{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:20px;
+    height:20px;
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:50%;
+    pointer-events: none;
+    box-sizing: border-box;
+transition: 0.2s;
+}
+.pointer1
+{
+    transition:0.05s;
+}
+.pointer2
+{
+    transition:0.1s;
+}
+.pointer3
+{
+    transition:0.15s;
+}
+.pointer4
+{
+    transition:0.2s;
+}
+.pointer5
+{
+    transition:0.25s;
+}
+.pointer6
+{
+    transition:0.3s;
+}
+
+.wrapper{
+	width: 200px;
+	height: 200px;
+	position: relative;
+	transition: all 10s;
+margin-top:20%;
+left:40%;
+    transform-style: preserve-3d;
+    animation:ani 10s;
+}
+@keyframes ani {
+    0% {transform: rotateZ(0) rotateX(0) rotateY(0); }
+    100% {	transform: rotateZ(0deg) rotateX(90deg) rotateY(310deg);}
+}
+
+.wrapper:hover{
+	transform: rotateZ(0deg) rotateX(90deg) rotateY(310deg);
+}
+.face{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	
+	opacity: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 25px;
+}
+.face:nth-child(1){
+    background-image: url(./images/batman.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat; 
+	transform-origin: center left;
+	transform: rotateY(90deg) translateX(-100px);
+}
+.face:nth-child(2){
+    background-image: url(./images/aquaman.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat; 
+	transform-origin: center right;
+	transform: rotateY(-90deg) translateX(100px);
+}
+.face:nth-child(3){
+    background-image: url(./images/joker.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat; 
+	transform-origin: center top;
+	transform: rotateX(-90deg) translateY(-100px)
+	
+}
+.face:nth-child(4){
+    background-image: url(./images/superman.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat; 
+	transform-origin: center bottom;
+	transform: rotateX(90deg) translateY(100px);
+}
+.face:nth-child(5){
+    background-image: url(./images/wonder.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat; 
+	transform-origin: center bottom;
+	transform: translateZ(-100px);
+}
+.face:nth-child(6){
+    background-image: url(./images/riddler.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat; 
+	transform-origin: center bottom;
+	transform: translateZ(100px);
+}
